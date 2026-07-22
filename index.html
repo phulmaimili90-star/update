@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALL TIME MODS</title>
+    <title>©</title>
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         body{
@@ -29,7 +29,6 @@
             color: #ff88cc;
         }
 
-        /* Live Counter */
         .live-counter {
             position: absolute;
             top: 20px;
@@ -42,7 +41,6 @@
             display: flex;
             gap: 15px;
             align-items: center;
-            box-shadow: 0 0 15px #ff00aa44;
         }
         .live-dot {
             display: inline-block;
@@ -112,7 +110,7 @@
             color:#fff;
             border-radius:50px;
             font-weight:bold;
-            background: linear-gradient(90deg, #ff00ff, #ff0088, #ff00cc, #cc00ff, #ff0066);
+            background: linear-gradient(90deg, #ff00ff, #ff0088, #ff00cc);
             background-size: 400%;
             animation: pinkrgb 4s linear infinite;
         }
@@ -158,6 +156,8 @@
 <body>
 
 <header>
+    <h1></h1>
+    <p></p>
     
     <div class="live-counter">
         <span><span class="live-dot"></span> <span id="online">248</span> Online</span>
@@ -171,62 +171,73 @@
     <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gg/refs/heads/main/Screenshot_2026-07-19-07-16-44-31_2bf9c84e05869b5ceb498150fc69e641.jpg">
     <h3>FREE FIRE PANEL</h3>
     <p>Latest Version</p>
-    <a href="https://sarfarazansari99p-netizen.github.io/Telegram/">⬇ DOWNLOAD</a>
+    <a href="https://sarfarazansari99p-netizen.github.io/Telegram/" onclick="playDownloadSound(event)">⬇ DOWNLOAD</a>
   </div>
 
   <div class="card">
     <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hh/a8ba038142062f4119a65fda22f03d1f448c486e/IMG-20260714-WA0002.jpg">
     <h3>HG CHEAT</h3>
     <p>Ultra Headshot</p>
-    <a href="https://www.mediafire.com/file/ax3olt65waa1eoq/APK+MOD+10.0.apks/file">⬇ DOWNLOAD</a>
+    <a href="https://www.mediafire.com/file/ax3olt65waa1eoq/APK+MOD+10.0.apks/file" onclick="playDownloadSound(event)">⬇ DOWNLOAD</a>
   </div>
 
   <div class="card">
     <img src="https://raw.githubusercontent.com/phulmaimili90-star/Jj/refs/heads/main/IMG-20260721-WA0024.jpg">
     <h3>DRIPCLIENT</h3>
     <p>Premium Files</p>
-    <a href="#">⬇ DOWNLOAD</a>
+    <a href="#" onclick="playDownloadSound(event)">⬇ DOWNLOAD</a>
   </div>
 
   <div class="card">
     <img src="https://raw.githubusercontent.com/phulmaimili90-star/H4ck-/refs/heads/main/IMG_20260721_231812_953.jpg">
     <h3>𝐏ᴀᴛᴏ 𝐓ᴇᴀᴍ</h3>
     <p>90 FPS Support</p>
-    <a href="#">⬇ DOWNLOAD</a>
+    <a href="#" onclick="playDownloadSound(event)">⬇ DOWNLOAD</a>
   </div>
 
   <div class="card">
     <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gh/refs/heads/main/sw.png">
     <h3>𝐒ɪʟᴇɴᴛ 𝐂ʜᴇᴀᴛs</h3>
     <p>New Edition</p>
-    <a href="https://www.mediafire.com/file/gfh6jacxe5cdj5k/SILENT-CHEATS-INJ-+INDIA+OB54+FINAL.zip/file">⬇ DOWNLOAD</a>
+    <a href="https://www.mediafire.com/file/gfh6jacxe5cdj5k/SILENT-CHEATS-INJ-+INDIA+OB54+FINAL.zip/file" onclick="playDownloadSound(event)">⬇ DOWNLOAD</a>
   </div>
 
   <div class="card">
     <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hhjj/refs/heads/main/IMG_20260722_070756_448.jpg">
     <h3>𝐏ʀɪᴍᴇ 𝐇ᴏᴏᴋ</h3>
     <p>HD Collection</p>
-    <a href="https://www.mediafire.com/file/tm026yhwdivfcno/PRIME-MODS-V5.apks/file">⬇ DOWNLOAD</a>
+    <a href="https://www.mediafire.com/file/tm026yhwdivfcno/PRIME-MODS-V5.apks/file" onclick="playDownloadSound(event)">⬇ DOWNLOAD</a>
   </div>
 
 </div>
 
 <!-- Telegram Button -->
-<a href="https://t.me/+oc2s2j5neKZlYzhl" target="_blank" class="telegram-btn" title="Join Telegram">
-    📬
-</a>
+<a href="https://t.me/+oc2s2j5neKZlYzhl" target="_blank" class="telegram-btn">📬</a>
 
 <footer>
-    <p>& ALL TIME UPDATE FREE</p>
+    <p>&copy; </p>
     <p style="color:#ff6666; margin-top:10px; font-size:0.9em;">
+       
     </p>
 </footer>
 
 <script>
+    let currentAudio = null;
+
+    function playDownloadSound(e) {
+        // Purana sound band karo
+        if (currentAudio) {
+            currentAudio.pause();
+        }
+
+        // Naya sound play karo
+        currentAudio = new Audio('https://www.myinstants.com/media/sounds/abhi-maza-ayagga.mp3');
+        currentAudio.play();
+    }
+
     // Live Counter
     let online = 248;
     let total = 18472;
-
     function updateCounter() {
         online = Math.floor(Math.random() * 90) + 210;
         total += Math.floor(Math.random() * 8) + 4;
@@ -245,9 +256,8 @@
             }
         });
     }, { threshold: 0.15 });
-
     cards.forEach(card => observer.observe(card));
 </script>
 
 </body>
-</html>
+</html> 
