@@ -3,34 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FREE FIRE MODS</title>
+    <title>ALL TIME MODS</title>
     <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
         body{
             background:#0b0b0b;
             font-family:Arial, sans-serif;
-            margin:20px;
             color: #fff;
-            padding-bottom: 100px;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background: linear-gradient(90deg, #111, #1a001a);
+            padding: 20px 15px;
+            text-align: center;
+            border-bottom: 3px solid #ff00aa;
+            position: relative;
+        }
+        header h1 {
+            color: #ff00aa;
+            text-shadow: 0 0 15px #ff00aa;
+            font-size: 2.3em;
+        }
+        header p {
+            color: #ff88cc;
+        }
+
+        /* Live Counter */
+        .live-counter {
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            background: #1a001a;
+            border: 2px solid #ff00aa;
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 14px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            box-shadow: 0 0 15px #ff00aa44;
+        }
+        .live-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #00ff00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
         }
 
         .cards{
             display:grid;
             grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-            gap:20px;
+            gap:25px;
+            padding: 30px 20px;
         }
 
         .card{
             background:#111;
-            border:2px solid #00ffee;
+            border:2px solid #ff00aa;
             border-radius:18px;
             overflow:hidden;
-            box-shadow:0 0 18px #00ffee55;
-            transition:.3s;
+            box-shadow:0 0 15px #ff00aa33;
+            transition: all 0.4s ease;
+            opacity: 0.85;
+            transform: translateY(20px);
         }
-
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            box-shadow: 0 0 25px #ff00ff88;
+        }
         .card:hover{
-            transform:translateY(-6px);
-            box-shadow:0 0 28px #00ffee;
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 0 35px #ff00ff;
         }
 
         .card img{
@@ -40,13 +92,14 @@
         }
 
         .card h3{
-            color:#00ffee;
+            color:#ff00ff;
             text-align:center;
             margin:15px 0 5px;
+            text-shadow: 0 0 10px #ff00ff;
         }
 
         .card p{
-            color:#ccc;
+            color:#ddd;
             text-align:center;
         }
 
@@ -54,70 +107,66 @@
             display:block;
             margin:18px;
             text-align:center;
-            padding:12px;
+            padding:14px;
             text-decoration:none;
             color:#fff;
             border-radius:50px;
             font-weight:bold;
-            background:linear-gradient(90deg,#ff00ff,#00ffee,#00ff55,#ffff00,#ff0000);
-            background-size:300%;
-            animation:rgb 3s linear infinite;
+            background: linear-gradient(90deg, #ff00ff, #ff0088, #ff00cc, #cc00ff, #ff0066);
+            background-size: 400%;
+            animation: pinkrgb 4s linear infinite;
         }
 
-        @keyframes rgb{
-            100%{ background-position:300%; }
+        @keyframes pinkrgb {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        /* Small Floating Telegram Button */
+        /* Telegram Button */
         .telegram-btn {
             position: fixed;
             bottom: 25px;
             right: 25px;
-            background: #229ED9;
+            background: #ff00aa;
             color: white;
-            width: 65px;
-            height: 65px;
+            width: 68px;
+            height: 68px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 4px 15px rgba(34, 158, 217, 0.6);
+            font-size: 32px;
+            box-shadow: 0 0 20px #ff00aa;
             z-index: 1000;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
             text-decoration: none;
         }
-
         .telegram-btn:hover {
-            transform: scale(1.15);
-            box-shadow: 0 6px 20px rgba(34, 158, 217, 0.8);
+            transform: scale(1.2) rotate(10deg);
         }
 
-        .telegram-btn::after {
-            content: "Telegram";
-            position: absolute;
-            top: -45px;
+        footer {
+            text-align: center;
+            padding: 25px;
             background: #111;
-            color: #fff;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            white-space: nowrap;
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.3s;
-        }
-
-        .telegram-btn:hover::after {
-            opacity: 1;
-            top: -50px;
+            border-top: 2px solid #ff00aa;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
+<header>
+    
+    <div class="live-counter">
+        <span><span class="live-dot"></span> <span id="online">248</span> Online</span>
+        <span><span id="total">18,472</span> Total</span>
+    </div>
+</header>
+
 <div class="cards">
-  <!-- यहीं सारे cards paste कर दो (पिछले message से) -->
+
   <div class="card">
     <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gg/refs/heads/main/Screenshot_2026-07-19-07-16-44-31_2bf9c84e05869b5ceb498150fc69e641.jpg">
     <h3>FREE FIRE PANEL</h3>
@@ -162,180 +211,43 @@
 
 </div>
 
-<!-- Small Telegram Floating Button -->
-<a href="https://t.me/+oc2s2j5neKZlYzhl" target="_blank" class="telegram-btn">
+<!-- Telegram Button -->
+<a href="https://t.me/+oc2s2j5neKZlYzhl" target="_blank" class="telegram-btn" title="Join Telegram">
     📬
 </a>
 
-</body>
-</html><!DOCTYPE html>
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FREE FIRE MODS</title>
-    <style>
-        body{
-            background:#0b0b0b;
-            font-family:Arial, sans-serif;
-            margin:20px;
-            color: #fff;
-            padding-bottom: 100px;
-        }
+<footer>
+    <p>& ALL TIME UPDATE FREE</p>
+    <p style="color:#ff6666; margin-top:10px; font-size:0.9em;">
+    </p>
+</footer>
 
-        .cards{
-            display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-            gap:20px;
-        }
+<script>
+    // Live Counter
+    let online = 248;
+    let total = 18472;
 
-        .card{
-            background:#111;
-            border:2px solid #00ffee;
-            border-radius:18px;
-            overflow:hidden;
-            box-shadow:0 0 18px #00ffee55;
-            transition:.3s;
-        }
+    function updateCounter() {
+        online = Math.floor(Math.random() * 90) + 210;
+        total += Math.floor(Math.random() * 8) + 4;
+        document.getElementById('online').textContent = online;
+        document.getElementById('total').textContent = total.toLocaleString();
+    }
+    setInterval(updateCounter, 7000);
+    updateCounter();
 
-        .card:hover{
-            transform:translateY(-6px);
-            box-shadow:0 0 28px #00ffee;
-        }
+    // Scroll Animation
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15 });
 
-        .card img{
-            width:100%;
-            height:180px;
-            object-fit:cover;
-        }
-
-        .card h3{
-            color:#00ffee;
-            text-align:center;
-            margin:15px 0 5px;
-        }
-
-        .card p{
-            color:#ccc;
-            text-align:center;
-        }
-
-        .card a{
-            display:block;
-            margin:18px;
-            text-align:center;
-            padding:12px;
-            text-decoration:none;
-            color:#fff;
-            border-radius:50px;
-            font-weight:bold;
-            background:linear-gradient(90deg,#ff00ff,#00ffee,#00ff55,#ffff00,#ff0000);
-            background-size:300%;
-            animation:rgb 3s linear infinite;
-        }
-
-        @keyframes rgb{
-            100%{ background-position:300%; }
-        }
-
-        /* Small Floating Telegram Button */
-        .telegram-btn {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #229ED9;
-            color: white;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 4px 15px rgba(34, 158, 217, 0.6);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .telegram-btn:hover {
-            transform: scale(1.15);
-            box-shadow: 0 6px 20px rgba(34, 158, 217, 0.8);
-        }
-
-        .telegram-btn::after {
-            content: "Telegram";
-            position: absolute;
-            top: -45px;
-            background: #111;
-            color: #fff;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            white-space: nowrap;
-            opacity: 0;
-            pointer-events: none;
-            transition: 0.3s;
-        }
-
-        .telegram-btn:hover::after {
-            opacity: 1;
-            top: -50px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="cards">
-  <!-- यहीं सारे cards paste कर दो (पिछले message से) -->
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gg/refs/heads/main/Screenshot_2026-07-19-07-16-44-31_2bf9c84e05869b5ceb498150fc69e641.jpg">
-    <h3>FREE FIRE PANEL</h3>
-    <p>Latest Version</p>
-    <a href="https://sarfarazansari99p-netizen.github.io/Telegram/">⬇ DOWNLOAD</a>
-  </div>
-
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hh/a8ba038142062f4119a65fda22f03d1f448c486e/IMG-20260714-WA0002.jpg">
-    <h3>HG CHEAT</h3>
-    <p>Ultra Headshot</p>
-    <a href="https://www.mediafire.com/file/ax3olt65waa1eoq/APK+MOD+10.0.apks/file">⬇ DOWNLOAD</a>
-  </div>
-
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Jj/refs/heads/main/IMG-20260721-WA0024.jpg">
-    <h3>DRIPCLIENT</h3>
-    <p>Premium Files</p>
-    <a href="#">⬇ DOWNLOAD</a>
-  </div>
-
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/phulmaimili90-star/H4ck-/refs/heads/main/IMG_20260721_231812_953.jpg">
-    <h3>𝐏ᴀᴛᴏ 𝐓ᴇᴀᴍ</h3>
-    <p>90 FPS Support</p>
-    <a href="#">⬇ DOWNLOAD</a>
-  </div>
-
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gh/refs/heads/main/sw.png">
-    <h3>𝐒ɪʟᴇɴᴛ 𝐂ʜᴇᴀᴛs</h3>
-    <p>New Edition</p>
-    <a href="https://www.mediafire.com/file/gfh6jacxe5cdj5k/SILENT-CHEATS-INJ-+INDIA+OB54+FINAL.zip/file">⬇ DOWNLOAD</a>
-  </div>
-
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hhjj/refs/heads/main/IMG_20260722_070756_448.jpg">
-    <h3>𝐏ʀɪᴍᴇ 𝐇ᴏᴏᴋ</h3>
-    <p>HD Collection</p>
-    <a href="https://www.mediafire.com/file/tm026yhwdivfcno/PRIME-MODS-V5.apks/file">⬇ DOWNLOAD</a>
-  </div>
-
-</div>
-
-<!-- Small Telegram Floating Button -->
-<a href="https://t.me/+oc2s2j5neKZlYzhl" target="_blank" class="telegram-btn">
-    📬
-</a>
+    cards.forEach(card => observer.observe(card));
+</script>
 
 </body>
 </html>
