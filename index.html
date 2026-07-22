@@ -1,195 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEW UPDATE</title>
+    <title>FREE FIRE MODS</title>
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
-        body {
-            background: linear-gradient(135deg, #F1038994, #F1038994, #F1038994);
-            color: white;
-            line-height: 1.6;
-        }
-        header {
-            text-align: center;
-            padding: 50px 20px 30px;
-            background: rgba(0,0,0,0.4);
-        }
-        .title-main {
-            font-size: 48px;
-            font-weight: bold;
-            background: linear-gradient(90deg, #00ddff, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        section { padding: 40px 20px; max-width: 520px; margin: 0 auto; }
-
-        .card {
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 28px;
-            overflow: hidden;
-            box-shadow: 0 0 40px rgba(0,180,255,0.35);
-            margin-bottom: 35px;
-        }
-        .card img { width: 100%; height: auto; display: block; }
-        .content { padding: 28px; text-align: center; }
-
-        .card-title {
-            font-size: 29px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #00FF00;
-        }
-
-        /* Automatic Light Around Download Button */
-        .download {
-            display: block;
-            width: 100%;
-            padding: 18px;
-            margin: 15px 0;
-            text-decoration: none;
+        body{
+            background:#0b0b0b;
+            font-family:Arial, sans-serif;
+            margin:20px;
             color: #fff;
-            font-size: 21px;
-            font-weight: bold;
-            border-radius: 18px;
-            background: linear-gradient(45deg, #00aaff, #0088ff);
-            box-shadow: 0 0 25px rgba(0,170,255,0.7);
-            position: relative;
-            overflow: hidden;
+            padding-bottom: 100px;
         }
 
-        .download::before {
-            content: '';
-            position: absolute;
-            inset: -6px;
-            border-radius: 24px;
-            background: linear-gradient(90deg, #00ffff, #ff00ff, #00ffff);
-            background-size: 300% 300%;
-            animation: borderLight 3s linear infinite;
-            z-index: -1;
-            filter: blur(5px);
-            opacity: 0.8;
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+            gap:20px;
         }
 
-        @keyframes borderLight {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 300% 50%; }
+        .card{
+            background:#111;
+            border:2px solid #00ffee;
+            border-radius:18px;
+            overflow:hidden;
+            box-shadow:0 0 18px #00ffee55;
+            transition:.3s;
         }
 
-        .download:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 45px rgba(0,200,255,0.9);
+        .card:hover{
+            transform:translateY(-6px);
+            box-shadow:0 0 28px #00ffee;
         }
 
-        /* Telegram Button - Bottom Corner */
+        .card img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+        }
+
+        .card h3{
+            color:#00ffee;
+            text-align:center;
+            margin:15px 0 5px;
+        }
+
+        .card p{
+            color:#ccc;
+            text-align:center;
+        }
+
+        .card a{
+            display:block;
+            margin:18px;
+            text-align:center;
+            padding:12px;
+            text-decoration:none;
+            color:#fff;
+            border-radius:50px;
+            font-weight:bold;
+            background:linear-gradient(90deg,#ff00ff,#00ffee,#00ff55,#ffff00,#ff0000);
+            background-size:300%;
+            animation:rgb 3s linear infinite;
+        }
+
+        @keyframes rgb{
+            100%{ background-position:300%; }
+        }
+
+        /* Small Floating Telegram Button */
         .telegram-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 25px;
+            right: 25px;
             background: #229ED9;
             color: white;
-            padding: 14px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
             box-shadow: 0 4px 15px rgba(34, 158, 217, 0.6);
-            z-index: 100;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
         }
+
         .telegram-btn:hover {
-            background: #1a7ab0;
+            transform: scale(1.15);
+            box-shadow: 0 6px 20px rgba(34, 158, 217, 0.8);
+        }
+
+        .telegram-btn::after {
+            content: "Telegram";
+            position: absolute;
+            top: -45px;
+            background: #111;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .telegram-btn:hover::after {
+            opacity: 1;
+            top: -50px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1 class="title-main">©SARFARAZ</h1>
-        <p>ALL TIME ALL UPDATE FILE</p>
-    </header>
+<div class="cards">
+  <!-- यहीं सारे cards paste कर दो (पिछले message से) -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gg/refs/heads/main/Screenshot_2026-07-19-07-16-44-31_2bf9c84e05869b5ceb498150fc69e641.jpg">
+    <h3>FREE FIRE PANEL</h3>
+    <p>Latest Version</p>
+    <a href="https://sarfarazansari99p-netizen.github.io/Telegram/">⬇ DOWNLOAD</a>
+  </div>
 
-    <!-- HG CHEAT -->
-    <section>
-        <div class="card">
-            <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hh/a8ba038142062f4119a65fda22f03d1f448c486e/IMG-20260714-WA0002.jpg" alt="HG CHEAT">
-            <div class="content">
-                <div class="card-title">HG CHEAT</div>
-                <a class="download" href="https://www.mediafire.com/file/i5hdg4eo8vli62s/APK+MODsbsbs25.apks/file" target="_blank">
-                    ⬇ DOWNLOAD HG CHEAT
-                </a>
-            </div>
-        </div>
-    </section>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hh/a8ba038142062f4119a65fda22f03d1f448c486e/IMG-20260714-WA0002.jpg">
+    <h3>HG CHEAT</h3>
+    <p>Ultra Headshot</p>
+    <a href="https://www.mediafire.com/file/ax3olt65waa1eoq/APK+MOD+10.0.apks/file">⬇ DOWNLOAD</a>
+  </div>
 
-    <!-- DRIPCLIENT -->
-    <section>
-        <div class="card">
-            <img src="https://raw.githubusercontent.com/phulmaimili90-star/Jj/refs/heads/main/IMG-20260721-WA0024.jpg" alt="DRIPCLIENT">
-            <div class="content">
-                <div class="card-title">DRIPCLIENT</div>
-                <a class="download" href="https://www.mediafire.com/file/7666056zfyw1gwa/DPFF-APKM0D-v2.3x-BETA.apks/file" target="_blank">
-                    ⬇ DOWNLOAD DRIPCLIENT
-                </a>
-            </div>
-        </div>
-    </section>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Jj/refs/heads/main/IMG-20260721-WA0024.jpg">
+    <h3>DRIPCLIENT</h3>
+    <p>Premium Files</p>
+    <a href="#">⬇ DOWNLOAD</a>
+  </div>
 
-    <!-- Pato Team -->
-    <section>
-        <div class="card">
-            <img src="https://raw.githubusercontent.com/phulmaimili90-star/H4ck-/refs/heads/main/IMG_20260721_231812_953.jpg" alt="Pato Team">
-            <div class="content">
-                <div class="card-title">𝐏ᴀᴛᴏ 𝐓ᴇᴀᴍ</div>
-                <a class="download" href="https://www.mediafire.com/file/atrev7pmhzjq4rh/Pato.Max.2.227.x.AP.zip/file" target="_blank">
-                    ⬇ DOWNLOAD PATO TEAM
-                </a>
-            </div>
-        </div>
-    </section>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/H4ck-/refs/heads/main/IMG_20260721_231812_953.jpg">
+    <h3>𝐏ᴀᴛᴏ 𝐓ᴇᴀᴍ</h3>
+    <p>90 FPS Support</p>
+    <a href="#">⬇ DOWNLOAD</a>
+  </div>
 
-    <!-- Silent Cheats -->
-    <section>
-        <div class="card">
-            <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gh/refs/heads/main/sw.png" alt="Silent Cheats">
-            <div class="content">
-                <div class="card-title">𝐒ɪʟᴇɴᴛ 𝐂ʜᴇᴀᴛs</div>
-                <a class="download" href="https://www.mediafire.com/file/gfh6jacxe5cdj5k/SILENT-CHEATS-INJ-+INDIA+OB54+FINAL.zip/file" target="_blank">
-                    ⬇ DOWNLOAD SILENT CHEATS
-                </a>
-            </div>
-        </div>
-    </section>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gh/refs/heads/main/sw.png">
+    <h3>𝐒ɪʟᴇɴᴛ 𝐂ʜᴇᴀᴛs</h3>
+    <p>New Edition</p>
+    <a href="https://www.mediafire.com/file/gfh6jacxe5cdj5k/SILENT-CHEATS-INJ-+INDIA+OB54+FINAL.zip/file">⬇ DOWNLOAD</a>
+  </div>
 
-    <!-- Prime Hook -->
-    <section>
-        <div class="card">
-            <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hhjj/refs/heads/main/IMG_20260722_070756_448.jpg" alt="Prime Hook">
-            <div class="content">
-                <div class="card-title">𝐏ʀɪᴍᴇ 𝐇ᴏᴏᴋ</div>
-                <a class="download" href="https://www.mediafire.com/file/tm026yhwdivfcno/PRIME-MODS-V5.apks/file" target="_blank">
-                    ⬇ DOWNLOAD PRIME HOOK
-                </a>
-            </div>
-        </div>
-    </section>
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hhjj/refs/heads/main/IMG_20260722_070756_448.jpg">
+    <h3>𝐏ʀɪᴍᴇ 𝐇ᴏᴏᴋ</h3>
+    <p>HD Collection</p>
+    <a href="https://www.mediafire.com/file/tm026yhwdivfcno/PRIME-MODS-V5.apks/file">⬇ DOWNLOAD</a>
+  </div>
 
-    <!-- FREE FIRE -->
-    <section>
-        <div class="card">
-            <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gg/refs/heads/main/Screenshot_2026-07-19-07-16-44-31_2bf9c84e05869b5ceb498150fc69e641.jpg" alt="FREE FIRE">
-            <div class="content">
-                <div class="card-title">FREE </div>
-                <a class="download" href="https://t.me/sarfarazfu/5637" target="_blank">
-                    ⬇ DOWNLOAD FREE
-                </a>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- Telegram Button - Bottom Right Corner -->
-    <a href="https://t.me/+oc2s2j5neKZlYzhl" class="telegram-btn" target="_blank">📱 Telegram</a>
+<!-- Small Telegram Floating Button -->
+<a href="https://t.me/+oc2s2j5neKZlYzhl" target="_blank" class="telegram-btn">
+    📬
+</a>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE FIRE MODS</title>
+    <style>
+        body{
+            background:#0b0b0b;
+            font-family:Arial, sans-serif;
+            margin:20px;
+            color: #fff;
+            padding-bottom: 100px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:#111;
+            border:2px solid #00ffee;
+            border-radius:18px;
+            overflow:hidden;
+            box-shadow:0 0 18px #00ffee55;
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-6px);
+            box-shadow:0 0 28px #00ffee;
+        }
+
+        .card img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+        }
+
+        .card h3{
+            color:#00ffee;
+            text-align:center;
+            margin:15px 0 5px;
+        }
+
+        .card p{
+            color:#ccc;
+            text-align:center;
+        }
+
+        .card a{
+            display:block;
+            margin:18px;
+            text-align:center;
+            padding:12px;
+            text-decoration:none;
+            color:#fff;
+            border-radius:50px;
+            font-weight:bold;
+            background:linear-gradient(90deg,#ff00ff,#00ffee,#00ff55,#ffff00,#ff0000);
+            background-size:300%;
+            animation:rgb 3s linear infinite;
+        }
+
+        @keyframes rgb{
+            100%{ background-position:300%; }
+        }
+
+        /* Small Floating Telegram Button */
+        .telegram-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #229ED9;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 4px 15px rgba(34, 158, 217, 0.6);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .telegram-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 6px 20px rgba(34, 158, 217, 0.8);
+        }
+
+        .telegram-btn::after {
+            content: "Telegram";
+            position: absolute;
+            top: -45px;
+            background: #111;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .telegram-btn:hover::after {
+            opacity: 1;
+            top: -50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cards">
+  <!-- यहीं सारे cards paste कर दो (पिछले message से) -->
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gg/refs/heads/main/Screenshot_2026-07-19-07-16-44-31_2bf9c84e05869b5ceb498150fc69e641.jpg">
+    <h3>FREE FIRE PANEL</h3>
+    <p>Latest Version</p>
+    <a href="https://sarfarazansari99p-netizen.github.io/Telegram/">⬇ DOWNLOAD</a>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hh/a8ba038142062f4119a65fda22f03d1f448c486e/IMG-20260714-WA0002.jpg">
+    <h3>HG CHEAT</h3>
+    <p>Ultra Headshot</p>
+    <a href="https://www.mediafire.com/file/ax3olt65waa1eoq/APK+MOD+10.0.apks/file">⬇ DOWNLOAD</a>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Jj/refs/heads/main/IMG-20260721-WA0024.jpg">
+    <h3>DRIPCLIENT</h3>
+    <p>Premium Files</p>
+    <a href="#">⬇ DOWNLOAD</a>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/H4ck-/refs/heads/main/IMG_20260721_231812_953.jpg">
+    <h3>𝐏ᴀᴛᴏ 𝐓ᴇᴀᴍ</h3>
+    <p>90 FPS Support</p>
+    <a href="#">⬇ DOWNLOAD</a>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Gh/refs/heads/main/sw.png">
+    <h3>𝐒ɪʟᴇɴᴛ 𝐂ʜᴇᴀᴛs</h3>
+    <p>New Edition</p>
+    <a href="https://www.mediafire.com/file/gfh6jacxe5cdj5k/SILENT-CHEATS-INJ-+INDIA+OB54+FINAL.zip/file">⬇ DOWNLOAD</a>
+  </div>
+
+  <div class="card">
+    <img src="https://raw.githubusercontent.com/phulmaimili90-star/Hhjj/refs/heads/main/IMG_20260722_070756_448.jpg">
+    <h3>𝐏ʀɪᴍᴇ 𝐇ᴏᴏᴋ</h3>
+    <p>HD Collection</p>
+    <a href="https://www.mediafire.com/file/tm026yhwdivfcno/PRIME-MODS-V5.apks/file">⬇ DOWNLOAD</a>
+  </div>
+
+</div>
+
+<!-- Small Telegram Floating Button -->
+<a href="https://t.me/+oc2s2j5neKZlYzhl" target="_blank" class="telegram-btn">
+    📬
+</a>
 
 </body>
 </html>
